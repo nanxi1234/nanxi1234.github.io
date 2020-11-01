@@ -1,18 +1,18 @@
----
-
+date: 2019-05-16T23:48:05.000Z
 layout: post
-
-title:"Java基础"
-
-date:2020-11-1 19:00:00 +800
-
-categories:[Java]
-
-tags:[Java,语法基础]
-
-comments：1
-
----
+title: Welcome to the desert of the real
+subtitle: '.'
+description: >-
+image: >-
+  https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821647/theme6_qeeojf.jpg
+optimized_image: >-
+  https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821647/theme6_qeeojf.jpg
+category: blog
+tags:
+  - welcome
+  - blog
+author: 张朝晖
+paginate: true
 
 lambda就是一个代码块，以及必须传入代码的变量规范
 注意几点：
