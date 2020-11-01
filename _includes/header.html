@@ -1,0 +1,12 @@
+<div class="content">
+    {% if site.background %}
+    <img src="{{ site.background }}" id="fullscreen">
+    {% endif %}
+
+    {% if site.avatar %}
+        <img src="{{ site.avatar }}" id="avatar">
+    {% endif %}
+
+    <h1>{{ site.title }}</h1>
+    <h3>{{ site.description }}</h3>
+</div>

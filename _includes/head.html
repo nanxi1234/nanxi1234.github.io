@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>{{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% if site.favicon %}
+<link rel="shortcut icon" href="{{ site.favicon }}" />
+{% endif %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
