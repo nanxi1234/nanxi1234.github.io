@@ -1,8 +1,7 @@
 # Site Settings
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
-  Thiago Rossener.
+name: 张朝晖
+title: 张朝晖 | A blog theme for Jekyll
+description: 路漫漫其修远兮，吾将上下而求索
 tags:
   - blog
   - template
@@ -12,14 +11,14 @@ tags:
 show_hero: true
 menu:
   - title: Home
-    url: /
+    url: /nanxi1234.github.io
   - title: About
     url: /about
   - title: Contact
-    url: /contact
+    url: /
   - title: Feed
     url: /feed.xml
-email: youremail@test.com
+email: 932874770@qq.com
 disqus_username: disqus_username
 
 
@@ -54,11 +53,11 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 collections:
-  authors:
+  authors: 张朝晖
     output: true
 paginate_path: "/page/:num/"
 show_get_theme_btn: true
-use_logo: false
+use_logo: true
 
 # Content paginator
 paginate_content:
@@ -101,4 +100,4 @@ exclude: [
 ]
 
 # Theme
-version: v3.1.0
+version: 船新版本
