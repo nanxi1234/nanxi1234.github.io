@@ -4,104 +4,106 @@ body {
 }
 
 .bar-header {
-  background-color: $primaryDark;
-  padding: rem(10px) rem(15px);
-  position: fixed;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
-  
-  @include media(">=sm") {
-    padding: rem(15px) rem(0px);
-  }
-
-  .logo {
-    display: inline-block;
-    margin: 0;
-    height: rem(16px);
-    line-height: rem(16px);
-
-    a {
-      display: block;
-      color: $accentDark;
-      text-decoration: none;
-      font-size: rem(16px);
-      position: relative;
-      outline: 0;
-    }
-
-    svg {
-      width: rem(120px);
-      height: rem(30px);
-      transition: all .4s;
-  
-      @include media(">=sm") {
-        width: rem(205px);
-      }
-    }
-  }
-
-  .version {
-    color: $accentDark;
-    font-size: rem(10px);
-    font-weight: normal;
-    line-height: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    transform: translateX(110%);
-    opacity: 0.3;
-  }
-
-  .icon-menu {
-    float: left;
-    cursor: pointer;
-    margin: rem(5px) rem(20px) rem(5px) 0;
-    width: rem(20px);
-    height: rem(20px);
-    fill: $accentDark;
+    background-color: $primaryDark;
+    padding: rem(10px) rem(15px);
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
+    opacity: 0.6;
 
     @include media(">=sm") {
-      margin: rem(5px) rem(20px) rem(5px) rem(25px);
+        padding: rem(15px) rem(0px);
     }
-  }
 
-  .dosearch {
-    float: right;
-    width: rem(30px);
-    height: rem(30px);
-    cursor: pointer;
-    margin: 0;
-    @include media(">=sm") {
-      margin: 0 rem(20px) 0 0;
+    .logo {
+        display: inline-block;
+        margin: 0;
+        height: rem(16px);
+        line-height: rem(16px);
+
+        a {
+            display: block;
+            color: $accentDark;
+            text-decoration: none;
+            font-size: rem(16px);
+            position: relative;
+            outline: 0;
+        }
+
+        svg {
+            width: rem(120px);
+            height: rem(30px);
+            transition: all .4s;
+
+            @include media(">=sm") {
+                width: rem(205px);
+            }
+        }
     }
-  }
 
-  .icon-search {
-    width: rem(20px);
-    height: rem(20px);
-    fill: $accentDark;
-    margin: rem(5px);
-  }
-
-  .get-theme {
-    display: none;
-    font-size: rem(13px);
-    font-weight: bold;
-    text-decoration: none;
-    background-color: $themeColor;
-    color: $accentDark;
-    padding: rem(5px) rem(10px);
-    border-radius: rem(5px);
-    float: right;
-    margin: rem(5px) rem(15px) rem(5px) rem(5px);
-
-    @include media(">=sm") {
-      display: inline-block;
+    .version {
+        color: $accentDark;
+        font-size: rem(10px);
+        font-weight: normal;
+        line-height: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        transform: translateX(110%);
+        opacity: 0.3;
     }
-  }
+
+    .icon-menu {
+        float: left;
+        cursor: pointer;
+        margin: rem(5px) rem(20px) rem(5px) 0;
+        width: rem(20px);
+        height: rem(20px);
+        fill: $accentDark;
+
+        @include media(">=sm") {
+            margin: rem(5px) rem(20px) rem(5px) rem(25px);
+        }
+    }
+
+    .dosearch {
+        float: right;
+        width: rem(30px);
+        height: rem(30px);
+        cursor: pointer;
+        margin: 0;
+
+        @include media(">=sm") {
+            margin: 0 rem(20px) 0 0;
+        }
+    }
+
+    .icon-search {
+        width: rem(20px);
+        height: rem(20px);
+        fill: $accentDark;
+        margin: rem(5px);
+    }
+
+    .get-theme {
+        display: none;
+        font-size: rem(13px);
+        font-weight: bold;
+        text-decoration: none;
+        background-color: $themeColor;
+        color: $accentDark;
+        padding: rem(5px) rem(10px);
+        border-radius: rem(5px);
+        float: right;
+        margin: rem(5px) rem(15px) rem(5px) rem(5px);
+
+        @include media(">=sm") {
+            display: inline-block;
+        }
+    }
 }
 
 body.main-page {
