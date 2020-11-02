@@ -19,14 +19,14 @@ body {
   .logo {
     display: inline-block;
     margin: 0;
-    height: rem(32px);
-    line-height: rem(32px);
+    height: rem(24px);
+    line-height: rem(24px);
 
     a {
       display: block;
       color: $accentDark;
       text-decoration: none;
-      font-size: rem(20px);
+      font-size: rem(24px);
       position: relative;
       outline: 0;
     }
