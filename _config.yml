@@ -10,13 +10,13 @@ tags:
   - netlify
 show_hero: true
 menu:
-  - title: Home
+  - title: 主页
     url: /nanxi1234.github.io
-  - title: About
+  - title: 关于我
     url: /about
-  - title: Contact
+  - title: 联系方式
     url: /
-  - title: Feed
+  - title: 反馈
     url: /feed.xml
 email: 932874770@qq.com
 disqus_username: disqus_username
@@ -100,4 +100,4 @@ exclude: [
 ]
 
 # Theme
-version: v3.1.0
+version: 船新版本
