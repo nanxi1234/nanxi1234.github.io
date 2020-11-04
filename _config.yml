@@ -49,7 +49,7 @@ sent_message_url: "/contact/message-sent/"
 
 
 # Build settings
-markdown: markdown
+markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 collections:
