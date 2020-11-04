@@ -2,10 +2,10 @@ title: 南夕 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
   这个人很懒，什么都没写<br/>
   ASC<br/>
-  <a href="mailto:i@wu-kan.cn">
+  <a href="932874770@qq.com">
     <i class="fas fa-envelope"></i>
   </a>
-  <a href="https://github.com/wu-kan">
+  <a href="https://github.com/nanxi1234">
     <i class="fab fa-github"></i>
   </a>
   <a href="https://codeforces.com/profile/WuK">
@@ -14,7 +14,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   <a href="https://vjudge.net/user/WuK">
     <i class="fas fa-smile"></i>
   </a>
-  <a href="https://www.zhihu.com/people/wu.kan/activities">
+  <a href="https://www.zhihu.com/people/zhang-zhao-hui-44-2">
     <i class="fab fa-zhihu"></i>
   </a>
   <iframe
@@ -38,7 +38,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         default:
           body:
             theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-            layout-reverse: true # 开启后sidebar在右边，反之左边
+            layout-reverse: false # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | #一些页面优化标签，看不懂可跳过
@@ -227,10 +227,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
               enable: true
-              img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
+              img: https://user-images.githubusercontent.com/67684652/98098081-d45ba380-1ec8-11eb-9a68-a523080968b7.jpg # 头像的地址
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fas fa-home fa-fw"></i> 首页'
-                href: /
+                href: /nanxi1234.github.io
               - title: '<i class="fas fa-comments fa-fw"></i> 留言'
                 href: /comments/
               - title: '<i class="fas fa-tags fa-fw"></i> 标签'
