@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "南夕"
-  avatar           : "/assets/images/20200505221657123.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://user-images.githubusercontent.com/67684652/98063428-fcc4ad00-1e8a-11eb-926e-765fc9077987.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "这个人很懒，什么都没写"
   location         : "上海"
   email            : 932874770@qq.com
