@@ -472,12 +472,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.4.0/themes/prism-nord.min.css"
+                href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" 
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/components/prism-core.min.js,npm/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.js"
+                src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
                 async="async"
-                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/"
+              <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
                 onload='
                   for(let x of document.getElementsByClassName("content"))
                     x.classList.add("line-numbers","match-braces");
