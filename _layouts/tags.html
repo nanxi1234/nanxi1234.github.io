@@ -1,38 +1,43 @@
 ---
-layout: minimal
+layout: archive
 ---
 
-{% assign date_format = site.date_format | default: "%m/%d/%Y" %}
+{{ content }}
 
-<div class="tags">
-  {% assign tags_list = site.tags %}
-    {% if tags_list.first[0] == null %}
-      {% for tag in tags_list %}
-          <a href="#{{ tag | slugify }}">#{{ tag }}</a>
-      {% endfor %}
-    {% else %}
-      {% for tag in tags_list %}
-          <a href="#{{ tag[0] | slugify }}">#{{ tag[0] }}</a>
-      {% endfor %}
+{% assign tags_max = 0 %}
+{% for tag in site.tags %}
+  {% if tag[1].size > tags_max %}
+    {% assign tags_max = tag[1].size %}
+  {% endif %}
+{% endfor %}
+
+<ul class="taxonomy__index">
+  {% for i in (1..tags_max) reversed %}
+    {% for tag in site.tags %}
+      {% if tag[1].size == i %}
+        <li>
+          <a href="#{{ tag[0] | slugify }}">
+            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% for i in (1..tags_max) reversed %}
+  {% for tag in site.tags %}
+    {% if tag[1].size == i %}
+      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
+        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
+        <div class="entries-{{ entries_layout }}">
+          {% for post in tag.last %}
+            {% include archive-single.html type=entries_layout %}
+          {% endfor %}
+        </div>
+        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+      </section>
     {% endif %}
-  {% assign tags_list = nil %}
-</div>
-
-{% for tag in site.tags  %}
-  <a class="post-anchor" id="{{ tag[0] | slugify }}"></a>
-  <div class="tag-title">
-    <span>#{{ tag[0] }}</span>
-  </div>
-  <ul class="post-list">
-      {% assign pages_list = tag[1] %}
-      {% for post in pages_list reversed %}
-          {% if post.title != null and post.is_generated != true %}
-            {% if group == null or group == post.group %}
-              <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></a></li>
-            {% endif %}
-          {% endif %}
-      {% endfor %}
-      {% assign pages_list = nil %}
-      {% assign group = nil %}
-  </ul>
+  {% endfor %}
 {% endfor %}
