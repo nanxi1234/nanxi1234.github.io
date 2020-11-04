@@ -1,4 +1,4 @@
-title: wu-kan # 站点标题
+title: 南夕 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
   这个人很懒，什么都没写<br/>
   ASC<br/>
@@ -376,7 +376,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
+                    "11/04/2020 11:03:56")// 这是我第一篇CSDN博客的时间
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
