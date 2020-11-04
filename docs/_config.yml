@@ -23,7 +23,7 @@ name                     : "南夕"
 description              : "路漫漫其修远兮，吾将上下而求索"
 url                      : "https://nanxi1234.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
-repository               : nanxi1234/nanxi1234.github.io# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "nanxi1234/nanxi1234.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : /assets/images/88x88.png# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : " "# overrides the website title displayed in the masthead, use " " for no title
@@ -39,9 +39,9 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : # "dark" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
+    theme                : # "github-dark" (default), "github-dark"
     issue_term           : # "pathname" (default)
   staticman:
     branch               : # "master"
