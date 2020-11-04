@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/images/bio-photo.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "这个人很懒，什么都没写"
   location         : "上海"
-  email            :932874770@qq.com
+  email            : 932874770@qq.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -126,7 +126,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:nanxi1234.github.io
+      # url: nanxi1234.github.io
 
 # Reading Files
 include:
