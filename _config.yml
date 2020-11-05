@@ -138,7 +138,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
                       "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"
+                        ]
                   });'
               ></script>
             - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
@@ -158,11 +159,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   background-position: 0% 0%;
                   background-repeat: no-repeat;
                   background-attachment: fixed;
-                  background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
+                  background-image: url(https://user-images.githubusercontent.com/67684652/98203921-f5c39a80-1f6f-11eb-9918-fc42232f028a.jpg);
                 }
                 @media (min-aspect-ratio: 2400/1850) {
                   .wrap {
-                    background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+                    background-image: url(https://user-images.githubusercontent.com/67684652/98203996-1e4b9480-1f70-11eb-857e-793fe84a0830.jpg);
                   }
                 }
                 .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
