@@ -16,9 +16,6 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   <a href="https://www.zhihu.com/people/zhang-zhao-hui-44-2">
     <i class="fab fa-zhihu"></i>
   </a>
-           <script src="//lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script>
-          <link rel="stylesheet" type="text/css" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1"></script>
 
 url: "https://nanxi1234.github.io"
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
@@ -399,6 +396,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     async='async'
                   ></script>
                 </div>
+                <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1"></script>
               - | # 觉得我的主题好用的话，让更多的人知道它吧！
                 <div>
                   <i class="fas fa-thumbs-up fa-fw"></i>
