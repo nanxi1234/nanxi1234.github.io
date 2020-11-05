@@ -396,8 +396,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     async='async'
                   ></script>
                 </div>
-             <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1">
-                 </script>
               - | # 觉得我的主题好用的话，让更多的人知道它吧！
                 <div>
                   <i class="fas fa-thumbs-up fa-fw"></i>
