@@ -417,14 +417,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               kilo: 千
               unit: 字
              - | # Music播放器
-<div>
-              <div>
-                  <i class="fas fa-Music fa-fw"></i></div>
-
-              <link rel="stylesheet" type="text/css" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+          <link rel="stylesheet" type="text/css" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css">
           <script src="//lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script>
            <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1"></script>
-</div>
+         
 
         page:
           masthead: # 显示顶栏
