@@ -17,7 +17,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fab fa-zhihu"></i>
   </a>
   <iframe
-    src="<script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1"></script>"
+     src="https://myhkw.cn/player/js/player.js" id="myhk" key="160456130852" m="1"
     width=100%
     height=52
     frameborder="no"
