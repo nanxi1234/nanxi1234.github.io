@@ -16,7 +16,15 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   <a href="https://www.zhihu.com/people/zhang-zhao-hui-44-2">
     <i class="fab fa-zhihu"></i>
   </a>
-        
+  <iframe
+    src="https://music.163.com/outchain/player?type=0&id=5316662768&auto=0&height=32"
+    width=100%
+    height=52
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+  ></iframe>
 url: "https://nanxi1234.github.io"
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
@@ -50,12 +58,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://user-images.githubusercontent.com/67684652/98211243-b9e30200-1f7c-11eb-92de-5016ad3038f2.jpg"
+                href="https://user-images.githubusercontent.com/67684652/98087576-44632d00-1ebb-11eb-96d2-466bbd11c6f9.jpg"
               />
               <link
                 rel="shortcut
                 icon"
-                href="https://user-images.githubusercontent.com/67684652/98211243-b9e30200-1f7c-11eb-92de-5016ad3038f2.jpg"
+                href="https://user-images.githubusercontent.com/67684652/98087576-44632d00-1ebb-11eb-96d2-466bbd11c6f9.jpg"
               />
             - | # 来自lanyon的页面样式，不要改
               <link
@@ -125,13 +133,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     "model": [
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                      "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
                       "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"
-                        ]
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
                   });'
               ></script>
             - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
@@ -216,7 +223,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
           sidebar: # 此配置项下是一些关于侧边栏的配置
-            disable: true # 是否不显示sidebar
+            disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
               enable: true
               img: https://user-images.githubusercontent.com/67684652/98098081-d45ba380-1ec8-11eb-9a68-a523080968b7.jpg # 头像的地址
@@ -267,7 +274,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       fuzzy: true
                     })'
                 ></script>
-             jekyll-toc: # 侧边栏的目录插件，https://github.com/allejo/jekyll-toc
+            jekyll-toc: # 侧边栏的目录插件，https://github.com/allejo/jekyll-toc
               enable: true
               prepend: | # 目录过长时自动折叠
                 <style>
@@ -396,7 +403,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     async='async'
                   ></script>
                 </div>
-             
               - | # 觉得我的主题好用的话，让更多的人知道它吧！
                 <div>
                   <i class="fas fa-thumbs-up fa-fw"></i>
@@ -414,7 +420,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               prepend: <i class="fas fa-user-edit fa-fw"></i>
               kilo: 千
               unit: 字
-         page:
+        page:
           masthead: # 显示顶栏
             enable: true
           katex: # katex 数学公式插件
@@ -461,7 +467,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       x.parentNode.insertAdjacentElement("beforebegin", m);
                     }'
               ></script>
-
           prism: # 代码高亮插件
             enable: true
             append: |
@@ -607,7 +612,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 var usage = "payment";
                 var wechat = "wxp://f2f0-Dt9rUdfhkssx8HH03KeN_0xBAVz3q9c";
                 var alipay = "HTTPS://QR.ALIPAY.COM/FKX090889Z54SQITZLZSC6";
-                var myname = "南夕";
+                var myname = "张朝晖";
                 var profile = "https://user-images.githubusercontent.com/67684652/98087576-44632d00-1ebb-11eb-96d2-466bbd11c6f9.jpg";
                 var multilingual = true;
                 var myname_hans = "南夕";
