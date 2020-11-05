@@ -159,11 +159,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   background-position: 0% 0%;
                   background-repeat: no-repeat;
                   background-attachment: fixed;
-                  background-image: url(https://user-images.githubusercontent.com/67684652/98203921-f5c39a80-1f6f-11eb-9918-fc42232f028a.jpg);
+                  background-image: url(https://user-images.githubusercontent.com/67684652/98204867-d2015400-1f71-11eb-9b58-a22de508c17f.jpg);
                 }
                 @media (min-aspect-ratio: 2400/1850) {
                   .wrap {
-                    background-image: url(https://user-images.githubusercontent.com/67684652/98203996-1e4b9480-1f70-11eb-857e-793fe84a0830.jpg);
+                    background-image: url(https://user-images.githubusercontent.com/67684652/98204867-d2015400-1f71-11eb-9b58-a22de508c17f.jpg);
                   }
                 }
                 .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
