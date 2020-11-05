@@ -613,11 +613,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 var usage = "payment";
                 var wechat = "wxp://f2f0-Dt9rUdfhkssx8HH03KeN_0xBAVz3q9c";
                 var alipay = "HTTPS://QR.ALIPAY.COM/FKX090889Z54SQITZLZSC6";
-                var myname = "张朝晖";
+                var myname = "南夕";
                 var profile = "https://user-images.githubusercontent.com/67684652/98087576-44632d00-1ebb-11eb-96d2-466bbd11c6f9.jpg";
                 var multilingual = true;
-                var myname_hans = "张朝晖";
-                var myname_hant = "张朝晖";
+                var myname_hans = "南夕";
+                var myname_hant = "南夕";
                 var myname_eng = "Zhangzhaohui";
                 var title = "选择你的支付方式";
                 var subtitle = "跟随进一步的指示以向" + myname + "付款";
