@@ -133,7 +133,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     "model": [
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                      "https://cdn.jsdelivr.net/npm/mooond_live2d_model@1.0.2/%E6%A8%B1%E8%8A%B1%E5%BA%84/misaki/shifuku.model.json",
+                      "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
                       "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
