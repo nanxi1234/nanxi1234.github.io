@@ -7,7 +7,6 @@
 ## 我的一些联系方式
 
 - Address: **East China University of Science and Technology.--shanghai,china**
-- Phone: **+86 13871840962**
 - Site: **<https://nanxi1234.github.io>**
 
 <!-- .slide vertical=true -->
@@ -22,4 +21,4 @@
 
 ## 博客浏览
 
-  请点击左侧列表，有什么问题欢迎联系我哦！
+  请点击左侧列表，左下角是音乐播放器，有什么问题欢迎联系我哦！
