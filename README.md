@@ -1,4 +1,4 @@
-![ChMkJlbKweaIVhCCAAFX442H38sAALGfgN6-1kAAVf7499](https://cdn.jsdelivr.net/gh/nanxi1234/picture//2020/20201106133135.jpg)
+![ChMkJlbKweaIVhCCAAFX442H38sAALGfgN6-1kAAVf7499](https://cdn.jsdelivr.net/gh/nanxi1234/picture//2020/20201106133355.jpg)
 
 欢迎访问我的个人主页！下面向你介绍一下我自己吧~
 
