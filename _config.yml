@@ -122,7 +122,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     },
                     "model": [
                       "https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
-                      "https://www.jsdelivr.com/package/npm/live2d-widget-model-hijiki",
+                      "https://cdn.jsdelivr.net/npm/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json",
                       "https://cdn.jsdelivr.net/npm/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
