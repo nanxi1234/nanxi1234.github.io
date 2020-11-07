@@ -63,8 +63,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
               />
-            - | # 用js引入fontawesome图标样式，功能更丰富
-              
+            - | # 用css引入fontawesome图标样式，功能更丰富
+              <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
             - | # 引入live2d看板娘！不需要可以把这一项都删掉
               <link
                 rel="stylesheet"
