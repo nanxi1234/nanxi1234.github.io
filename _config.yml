@@ -87,7 +87,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   pio_canvas.id = "pio";
                   pio_canvas.style.width = "14rem";
                   pio_canvas.width = "600";
-                  pio_canvas.height = "800";
+                  pio_canvas.height = "1000";
                   pio_container.insertAdjacentElement("beforeend", pio_canvas);
                   let pio = new Paul_Pio({
                     "mode": "fixed",
