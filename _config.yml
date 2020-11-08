@@ -589,7 +589,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           group_by: "%b %Y" # 见<https://liquid.bootcss.com/filters/date/>
           posts_count:
             enable: true # 博文数量统计
-            append: 篇博文。长路漫漫！ # 提示语
+            append: 篇博文，长路漫漫！ # 提示语
           pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
             enable: false
           year_count: true
