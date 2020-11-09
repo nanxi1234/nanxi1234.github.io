@@ -5,7 +5,7 @@
 ## 我的一些联系方式
 
 - Address: **East China University of Science and Technology.--shanghai,china**
-- Site: **<https://nanxi1234.github.io>**
+- Site: **<https://zhaohuiblog.com>**
 
 <!-- .slide vertical=true -->
 
