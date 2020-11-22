@@ -216,7 +216,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
               enable: true
-              img: https://user-images.githubusercontent.com/67684652/98098081-d45ba380-1ec8-11eb-9a68-a523080968b7.jpg # 头像的地址
+              img: https://cdn.jsdelivr.net/gh/nanxi1234/picture//2020/20201122194652.png # 头像的地址
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fas fa-home fa-fw"></i> 首页'
                 href: /nanxi1234.github.io
