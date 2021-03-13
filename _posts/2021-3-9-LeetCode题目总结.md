@@ -22,7 +22,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
   
 
-![image-20210313223503094](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210313223503094.png)
+![image-20210313224518769](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210313224518769.png)
 
 ######  2.两数相加
 
