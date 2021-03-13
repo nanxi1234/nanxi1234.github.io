@@ -22,7 +22,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
   
 
-![image-20210313225004520](https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225718.png)
+<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225718.png" alt="image-20210313225004520" style="zoom:50%;" />
 
 ######  2.两数相加
 
@@ -36,11 +36,10 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 链接：https://leetcode-cn.com/problems/add-two-numbers
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-![image-20210313225706230](https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225706.png)
+<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225706.png" alt="image-20210313225706230" style="zoom:50%;" />
 
 思路：将倒序的链表1和2的数顺序取出，求和(注意进位)后添加到新链表的尾端
 
 
 
-<center>![image-20210313215454214](https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225737.png)
-</center>
+<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225737.png" alt="image-20210313215454214" style="zoom:50%;" />
