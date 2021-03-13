@@ -22,7 +22,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
   
 
-![image-20210309220049979](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210309220049979.png)
+![image-20210313215332817](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210313215332817.png)
 
 ######  2.两数相加
 
@@ -36,8 +36,8 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 链接：https://leetcode-cn.com/problems/add-two-numbers
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-![image-20210312205124543](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210312205124543.png)
+![image-20210313215350304](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210313215350304.png)
 
 思路：将倒序的链表1和2的数顺序取出，求和(注意进位)后添加到新链表的尾端
 
-![image-20210312225242490](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210312225242490.png)
+![image-20210313215454214](C:\Users\zhaohuizhang\AppData\Roaming\Typora\typora-user-images\image-20210313215454214.png)
