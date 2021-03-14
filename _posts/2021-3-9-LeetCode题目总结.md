@@ -18,7 +18,7 @@ author: 张朝晖
 nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的右边的第一个比 x 大的元素。如果不存在，对应位置输出 -1 。
 
 来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/next-greater-element-iclass Solution {
+链接：https://leetcode-cn.com/problems/next-greater-element-iclass 
 
   
 
