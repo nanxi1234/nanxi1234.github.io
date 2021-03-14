@@ -2,7 +2,7 @@
 date: 2021-3-14 16:10:40
 layout: post
 title: LeetCode题目总结
-author: 张朝晖
+author: 
 ---
 
 
@@ -45,4 +45,115 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
 <center><img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225737.png" alt="image-20210313215454214" style="zoom:50%;"  /></center>
 
+###### 3.设计哈希集合
+
+不使用任何内建的哈希表库设计一个哈希集合（HashSet）。
+
+实现 MyHashSet 类：
+
+void add(key) 向哈希集合中插入值 key 。
+bool contains(key) 返回哈希集合中是否存在这个值 key 。
+void remove(key) 将给定值 key 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/design-hashset
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+```java
+class MyHashSet {
+
+  private static final int BASE = 769;
+
+  private LinkedList[] data;//定义变量
+
+  /** Initialize your data structure here. */
+
+  public MyHashSet() {//构造函数
+
+    data = new LinkedList[BASE];//数组
+
+   for (int i = 0; i < BASE; ++i) {
+
+      data[i] = new LinkedList<Integer>();//数组的每个位置是一个链表
+
+    }
+
+  }
+
+  public void add(int key) {
+
+    int h = hash(key);//软缓存，将每个键的散列值（数组索引值）存储在h变量中
+
+    Iterator<Integer> iterator = data[h].iterator();//根据散列值作为数组索引，遍历此处的链表，并在尾部插入
+
+    while (iterator.hasNext()) {
+
+     Integer element = iterator.next();
+      
+      if (element == key) {
+
+        return;//如果链表中已存在，则退出方法（哈希表不允许有相同元素存在）
+
+      }
+
+    }
+
+    data[h].offerLast(key);//链表尾部插入元素
+
+  }
+
+  public void remove(int key) {
+
+    int h = hash(key);
+
+    Iterator<Integer> iterator = data[h].iterator();
+
+    while (iterator.hasNext()) {
+
+      Integer element = iterator.next();
+
+      if (element == key) {
+
+        data[h].remove(element);
+
+        return;
+
+      }
+
+    }
+
+  }
+
+  /** Returns true if this set contains the specified element */
+
+  public boolean contains(int key) {
+
+    int h = hash(key);
+
+    Iterator<Integer> iterator = data[h].iterator();
+
+    while (iterator.hasNext()) {
+
+      Integer element = iterator.next();
+
+      if (element == key) {
+
+        return true;
+
+      }
+
+    }
+
+    return false;
+
+  }
+
+  private static int hash(int key) {
+
+    return key % BASE;//键值转换成哈希值作为数组的索引
+
+  }
+
+}
+```
 
