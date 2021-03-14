@@ -1,5 +1,5 @@
 ---
-date: 2020-11-02 16:10:40
+date: 2021-3-14 16:10:40
 layout: post
 title: LeetCode题目总结
 author: 张朝晖
@@ -19,11 +19,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/next-greater-element-iclass 
-
-  
-
-<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225718.png" alt="image-20210313225004520" style="zoom:50%;" />
-
+  <center><img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210314140346.png" alt="image-20210313225004520" style="zoom:50%;" ></center>
 
 ######  2.两数相加
 
@@ -37,7 +33,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 链接：https://leetcode-cn.com/problems/add-two-numbers
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225706.png" alt="image-20210313225706230" style="zoom:50%;" />
+<center><img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225706.png" alt="image-20210313225706230" style="zoom:50%;" ></center>
 
 
 
@@ -47,6 +43,6 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 
 
 
-<img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225737.png" alt="image-20210313215454214" style="zoom:50%;"  />
+<center><img src="https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210313225737.png" alt="image-20210313215454214" style="zoom:50%;"  /></center>
 
 
