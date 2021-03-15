@@ -245,3 +245,125 @@ class Solution {
 }
 ```
 
+###### 5.删除链表的倒数第N个节点
+
+给你一个链表，删除链表的倒数第 `n` 个结点，并且返回链表的头结点。
+
+在对链表进行操作时，一种常用的技巧是添加一个哑节点（dummy node），它的 next 指针指向链表的头节点。这样一来，我们就不需要对头节点进行特殊的判断了
+
+解法一：将链表入栈，再出栈，此时第n个出栈的就是要删除的结点
+
+解法二：快慢指针，指针first先遍历到n，second指针再开始遍历，当first指针到达链表的结尾时，second到达所要删除的结点所在。
+
+- 解法一：
+
+  ```java
+  class Solution {
+  
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+  
+    ListNode dummy=new ListNode(0,head);
+  
+    Deque<ListNode> stack=new LinkedList<ListNode>();
+  
+    ListNode cur=dummy;//cur存储对dummy的引用
+  
+    while(cur != null)
+  
+    {
+  
+      stack.push(cur);
+  
+      cur=cur.next;
+  
+    }
+  
+    for(int i=0;i<n;i++)
+  
+    { 
+      stack.pop();
+    }
+  
+    ListNode mubiao=stack.peek();
+  
+    mubiao.next=mubiao.next.next;
+  
+    ListNode ans=dummy.next;
+  
+    return ans;
+  
+  }
+  
+  }
+  ```
+
+  
+
+- 解法二：
+
+```java
+/**
+
+ \* Definition for singly-linked list.
+
+ \* public class ListNode {
+
+ \*   int val;
+
+ \*   ListNode next;
+
+ \*   ListNode() {}
+
+ \*   ListNode(int val) { this.val = val; }
+
+ \*   ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+
+ \* }
+
+ */
+
+class Solution {
+
+  public ListNode removeNthFromEnd(ListNode head, int n) {
+
+  ListNode dummy=new ListNode(0,head);
+
+  ListNode first=head;
+
+  ListNode second=dummy;//因为dummy是head的前一个结点
+
+  //因此head到链表结尾时，dummy在要删除结点的前一个结点
+
+  for(int i=0;i<n;i++)
+
+  {
+
+   first=first.next;
+
+  }
+
+  while(first != null)
+
+  {
+
+  second=second.next;
+
+  first=first.next;
+
+  }
+
+   second.next=second.next.next;
+
+  ListNode ans=dummy.next;
+
+  return ans;
+
+
+
+}
+
+}
+```
+
+
+
