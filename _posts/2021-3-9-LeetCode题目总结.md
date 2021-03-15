@@ -157,3 +157,91 @@ class MyHashSet {
 }
 ```
 
+###### 4.螺旋矩阵
+
+给你一个 `m` 行 `n` 列的矩阵 `matrix` ，请按照 **顺时针螺旋顺序** ，返回矩阵中的所有元素。
+
+![image-20210315121415357](https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210315121422.png)
+
+```java
+class Solution {
+
+  public List<Integer> spiralOrder(int[][] matrix) {
+
+  LinkedList<Integer> result=new LinkedList<>();
+
+  if(matrix==null||matrix.length==0) return result;
+
+  int top=0;
+
+  int left=0;
+
+  int right=matrix[0].length-1;
+
+  int bottom=matrix.length-1;
+
+  int vals=matrix.length*matrix[0].length;
+
+  while(vals >= 1)
+
+  {
+
+    for(int k=left;k <= right && vals >= 1;k++)
+
+    {
+
+      result.add(matrix[top][k]); 
+
+      vals--;
+
+    }
+
+    top++;
+
+     for(int k=top;k <= bottom && vals >= 1;k++)
+
+   {
+
+     result.add(matrix[k][right]); 
+
+      vals--; 
+
+    }
+
+    right--;
+
+     for(int k=right;k >= left && vals >= 1;k--)
+
+    {
+
+      result.add(matrix[bottom][k]);
+
+       vals--; 
+
+    }
+
+    bottom--;
+
+     for(int k=bottom;k >= top && vals >= 1;k--)
+
+    {
+
+      result.add(matrix[k][left]); 
+
+       vals--; 
+
+    }
+
+    left++;
+
+
+
+  }
+
+  return result;
+
+  }
+
+}
+```
+
