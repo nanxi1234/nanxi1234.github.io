@@ -352,7 +352,7 @@ class Solution {
 
   }
 
-   second.next=second.next.next;
+   second.next=second.next.next;//second结点位于所要删除结点的上一个结点
 
   ListNode ans=dummy.next;
 
@@ -366,4 +366,80 @@ class Solution {
 ```
 
 
+
+###### 6.螺旋数组II
+
+给你一个正整数 `n` ，生成一个包含 `1` 到 `n2` 所有元素，且元素按顺时针顺序螺旋排列的 `n x n` 正方形矩阵 `matrix` 
+
+```java
+class Solution {
+
+  public int[][] generateMatrix(int n) {
+
+   int[][] res=new int[n][n];
+
+   int left=0;
+
+   int top=0;
+
+   int right=n-1;
+
+   int bottom=n-1;
+
+   int index=1;
+
+while(index <= n*n)
+
+{
+
+  for(int j=left;j<=right;j++)
+
+  {
+
+   res[top][j]=index++;//因为元素从1--n*n，所以可以用index++代表数据
+
+  }
+
+  top++;
+
+  for(int j=top;j<=bottom;j++)
+
+  {
+
+   res[j][right]=index++;  
+
+  }
+
+  right--;
+
+  for(int j=right;j>=left;j--)
+
+  {
+
+   res[bottom][j]=index++;  
+
+  }
+
+  bottom--;
+
+  for(int j=bottom;j>=top;j--)
+
+  {
+
+   res[j][left]=index++;  
+
+  }
+
+  left++;
+
+
+
+}
+
+  return res;
+
+  }
+
+}
+```
 
