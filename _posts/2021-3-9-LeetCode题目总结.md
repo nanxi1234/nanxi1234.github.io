@@ -443,3 +443,44 @@ while(index <= n*n)
 }
 ```
 
+###### 7.不同的子序列（*）
+
+给定一个字符串 s 和一个字符串 t ，计算在 s 的子序列中 t 出现的个数。
+
+字符串的一个 子序列 是指，通过删除一些（也可以不删除）字符且不干扰剩余字符相对位置所组成的新字符串。（例如，"ACE" 是 "ABCDE" 的一个子序列，而 "AEC" 不是）
+
+题目数据保证答案符合 32 位带符号整数范围。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/distinct-subsequences
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+```java
+class Solution {
+    public int numDistinct(String s, String t) {
+        int m = s.length(), n = t.length();
+        if (m < n) {
+            return 0;//如果s字符串小于t，则t不可能为s的子串
+        }
+        int[][] dp = new int[m + 1][n + 1];//dp代表t[n:]是s[m:]子串的情况总和数
+        for (int i = 0; i <= m; i++) {
+            dp[i][n] = 1;//当j为n时，t串为空串，空串是任意串的子串
+        }
+        for (int i = m - 1; i >= 0; i--) {
+            char sChar = s.charAt(i);
+            for (int j = n - 1; j >= 0; j--) {
+                char tChar = t.charAt(j);//若两个字符相等：1.用这个字符（用完之后，s和t中的字符消失） 2.跳过这个字符（s中的这个字符消失）
+                if (sChar == tChar) {
+                    dp[i][j] = dp[i + 1][j + 1] + dp[i + 1][j];//用这个字符+跳过这个字符=情况总和数
+                } else {
+                    dp[i][j] = dp[i + 1][j];//不相等，则只能跳过这个字符
+                }
+            }
+        }
+        return dp[0][0];//返回所有情况总和数
+    }
+}
+```
+
+![image-20210317155703572](https://cdn.jsdelivr.net/gh/nanxi1234/nanxi1234.github.io/image/2021/20210317155703.png)
+
