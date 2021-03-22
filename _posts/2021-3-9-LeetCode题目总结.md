@@ -490,4 +490,4 @@ class Solution {
 
 因为长度为n的数组nums中所有的数字都在0~n-1之间，因此若没有重复数字，则它们排序后应该是01234…；
 
-  https://pjp1-broadcast.officeapps.live.com/m/Broadcast.aspx?Fi=04ea4fc451f97da7%5Fdfb3a764%2De814%2D4d4a%2D9265%2D8da717c01244%2Dasync%2Epptx
+ [{9BE4B874-AC00-4544-B163-0A4021ED26F1}.tmp](C:\Users\zhaohuizhang\Documents\Tencent Files\All Users\TIM\Misc\com.tencent.filecloud\{9BE4B874-AC00-4544-B163-0A4021ED26F1}.tmp) 
