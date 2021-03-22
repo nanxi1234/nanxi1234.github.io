@@ -489,17 +489,13 @@ class Solution {
 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
 
 因为长度为n的数组nums中所有的数字都在0~n-1之间，因此若没有重复数字，则它们排序后应该是01234…；PPT演示如下：
-         
-
-```html
-<div id="cincopa_84f53d">...</div><script type="text/javascript">
+         <div id="cincopa_84f53d">...</div><script type="text/javascript">
 var cpo = []; cpo["_object"] ="cincopa_84f53d"; cpo["_fid"] = "AMMAoxu8dKXm";
 var _cpmp = _cpmp || []; _cpmp.push(cpo);
 (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
 cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
 var c = document.getElementsByTagName("script")[0];
-c.parentNode.insertBefore(cp, c); })(); </script> 
-```
+c.parentNode.insertBefore(cp, c); })(); </script>
 
 ​                     
 
