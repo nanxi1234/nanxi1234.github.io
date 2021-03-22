@@ -488,6 +488,5 @@ class Solution {
 
 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
 
-因为长度为n的数组nums中所有的数字都在0~n-1之间，因此若没有重复数字，则它们排序后应该是01234…；
-
- [{9BE4B874-AC00-4544-B163-0A4021ED26F1}.tmp](C:\Users\zhaohuizhang\Documents\Tencent Files\All Users\TIM\Misc\com.tencent.filecloud\{9BE4B874-AC00-4544-B163-0A4021ED26F1}.tmp) 
+因为长度为n的数组nums中所有的数字都在0~n-1之间，因此若没有重复数字，则它们排序后应该是01234…；PPT演示如下：
+                                                                     https://docs.qq.com/slide/DQ3RYZlBVSUZGa2N4
