@@ -535,3 +535,37 @@ class Solution {//一个萝卜一个坑算法
 }
 ```
 
+###### 9.132模式
+
+<div id="cincopa_c81005">...</div><script type="text/javascript">
+var cpo = []; cpo["_object"] ="cincopa_c81005"; cpo["_fid"] = "AQAAsze7imsi";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script>
+
+从a[n-1]开始入栈，维护这个栈为单调递减栈，若入栈的a[i]>stack.peek(),则不断弹出栈顶，直到a[i]<stack.peek(),a[i]入栈，若a[i]<k则有132模式，栈里面保证有一个数大于k=stack.pop()不然它也不会被弹出去
+
+```java
+class Solution {    
+    public boolean find132pattern(int[] nums) {
+        int len = nums.length;        
+        Stack<Integer> deque = new Stack<>();        
+        deque.push(nums[len-1]);        
+        int k = Integer.MIN_VALUE;        
+        for(int i = len-2; i >=0;i--){
+            if(nums[i] < k){                
+                return true;
+            }            
+            while (!deque.isEmpty() &&  nums[i] > deque.peek())
+            {
+                k = deque.pop();            
+            }            
+            deque.push(nums[i]);        
+            }       
+        return false;    
+             } 
+             }
+```
+
