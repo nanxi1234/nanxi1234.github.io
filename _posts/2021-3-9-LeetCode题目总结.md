@@ -569,7 +569,7 @@ class Solution {
              }
 ```
 
-###### 10. 最长重复子串
+###### 10. 最长重复子串（滑动窗口）
 
   一个重复字符串是由两个相同的字符串首尾拼接而成，例如abcabc便是长度为6的一个重复字符串，而abcba则不存在重复字符串。 
 
@@ -587,7 +587,7 @@ class Solution {
 
 
 
-##### 11.拼硬币
+##### 11.拼硬币（动态规划）
 
 ```java
 package Dynamicprogramming;
@@ -615,6 +615,41 @@ class TestDemo{
         int[] nums={1,2,5};
         int target=11;
        System.out.println(CoinDemo.CoinChange(nums,target));
+    }
+}
+```
+
+##### 12.找出第N个丑数
+
+```java
+package Dynamicprogramming;
+//找出第N个的丑数
+class UglyNumber {
+    public static int FindUglyNumber(int n){
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        int p2 = 1, p3 = 1, p5 = 1;
+        for (int i = 2; i <= n; i++) {
+            int num2 = dp[p2] * 2, num3 = dp[p3] * 3, num5 = dp[p5] * 5;
+            dp[i] = Math.min(Math.min(num2, num3), num5);//转移方程
+            if (dp[i] == num2) {
+                p2++;
+            }
+            if (dp[i] == num3) {
+                p3++;
+            }
+            if (dp[i] == num5) {
+                p5++;
+            }
+        }
+        return dp[n];
+    }
+
+}
+class TestDemo1{
+    public static void main(String[] args) {
+        int N=11;
+        System.out.println(MUglyNumber.FindUglyNumber(N));
     }
 }
 ```
