@@ -581,3 +581,40 @@ class Solution {
 
 ​        输出：4
 
+
+
+
+
+
+
+##### 11.拼硬币
+
+```java
+package Dynamicprogramming;
+public class CoinDemo {
+    public static int CoinChange(int[] A, int target) {
+        int[] dp = new int[target + 1];
+        int n = A.length;
+        dp[0] = 0;//初始化
+        for (int i = 1; i < target + 1; i++) {
+            dp[i] = Integer.MAX_VALUE;//先给他一个最大的值，如果后面有更好的值，再取更好的值
+            for (int j = 0; j < n; j++) {
+                if (i >= A[j] && dp[i - A[j]] != Integer.MAX_VALUE) {//要拼的目标值大于最后一个面额的钱，且拼的出来
+                    dp[i] = Math.min(dp[i - A[j]] + 1, dp[i]);
+                }
+            }
+        }
+        if (dp[target] == Integer.MAX_VALUE) {
+            return -1;//到死没拼出来
+        }
+        return dp[target];
+    }
+}
+class TestDemo{
+    public static void main(String[] args) {
+        int[] nums={1,2,5};
+        int target=11;
+       System.out.println(CoinDemo.CoinChange(nums,target));
+    }
+}
+```
