@@ -653,3 +653,129 @@ class TestDemo1{
     }
 }
 ```
+
+##### 13.存在重复元素III
+
+给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，使得 abs(nums[i] - nums[j]) <= t ，同时又满足 abs(i - j) <= k 。
+
+如果存在则返回 true，不存在返回 false。
+
+```java
+class Solution {
+
+  public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+
+  int N=nums.length;
+
+    if(N==0 || N==1) 
+
+    {return false;}
+
+    else if(N-1<=k)
+
+    {
+
+    for(int i=0;i<N-1;i++)
+
+    {
+
+     for(int j=i+1;j<N;j++)
+
+     {
+
+      if(absdemo(nums[i],nums[j])<=t)
+
+     {
+
+       return true;
+
+    }
+
+     } 
+
+      }
+
+   }
+
+    else if(N-1>k)
+
+  {
+
+    for(int i=0;i<N-k;i++)
+
+    {
+
+      for(int j=i+1;j<i+k+1;j++)
+
+      {
+
+        if(absdemo(nums[i],nums[j])<=t)
+
+     {
+
+       return true;
+
+     }
+
+      }
+
+    } 
+    for(int a=N-k;a<N-1;a++)
+
+    {
+
+      for(int b=a+1;b<N;b++)
+
+      {
+       if(absdemo(nums[a],nums[b])<=t)
+
+       {
+
+       return true;
+
+       }
+
+      }
+
+    }
+
+    }
+
+       return false;
+
+}
+
+public long absdemo(int x,int y)
+
+{ 
+
+  long a=x,b=y;
+
+  long res=a-b;
+
+  if(res<0)
+
+  {
+  return b-a;
+   }
+
+  return a-b;
+     }
+
+ }
+```
+
+以上代码超出时间限制，时间复杂度为NK，空间复杂度为1.
+
+- 因此我们希望能够找到一个数据结构维护滑动窗口内的元素，该数据结构需要满足以下操作：
+
+- 支持添加和删除指定元素的操作，否则我们无法维护滑动窗口；
+
+内部元素有序，支持二分查找的操作，这样我们可以快速判断滑动窗口中是否存在元素满足条件，具体而言，对于元素 xx，当我们希望判断滑动窗口中是否存在某个数 yy 落在区间 [x - t, x + t][x−t,x+t] 中，只需要判断滑动窗口中所有大于等于 x - t 的元素中的最小元素是否小于等于 x + t 即可。
+
+用有序集合来支持这些操作：
+
+什么是TreeSet？
+
+
+
