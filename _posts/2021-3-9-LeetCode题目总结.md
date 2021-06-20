@@ -777,5 +777,82 @@ public long absdemo(int x,int y)
 
 什么是TreeSet？
 
+#####  1486.数组异或操作
+
+给你两个整数，n 和 start 。
+
+数组 nums 定义为：nums[i] = start + 2*i（下标从 0 开始）且 n == nums.length 。
+
+请返回 nums 中所有元素按位异或（XOR）后得到的结果。
+
+##### 474. 一和零
+
+给你一个二进制字符串数组 strs 和两个整数 m 和 n 。
+
+请你找出并返回 strs 的最大子集的大小，该子集中 最多 有 m 个 0 和 n 个 1 。
+
+如果 x 的所有元素也是 y 的元素，集合 x 是集合 y 的 子集 。
+
+三维dp数组：一维是strs中的元素个数，另外两维是0和1的个数
+
+```java
+class Solution {
+  public int findMaxForm(String[] strs, int m, int n) {
+      int l=strs.length;
+      int[] cur=new int[2];
+      int zero=0,one=0;
+     int[][][] dp=new int[l+1][m+1][n+1];
+     //对于strs中的每一个元素只有选与不选的决策，选与不选与否主要看选了能否能构成最优解：满足条件的最优子集
+      for(int L=1;L<l+1;L++)
+      {
+        cur=zeroone(strs[L-1]);
+       zero=cur[0];one=cur[1];
+        for(int M=0;M<m+1;M++)
+        {
+          for(int N=0;N<n+1;N++)
+          {
+            dp[L][M][N]=dp[L-1][M][N];
+            //对于dp[L][M][N],对于第L个元素,选了与没选一比，看谁大决定选不选
+            if(M-zero>=0 && N-one>=0)//能选的情况
+            {
+            dp[L][M][N]=Math.max(dp[L-1][M-zero][N-one]+1,dp[L][M][N]);
+            }
+          }
+        }
+      }
+      return dp[l][m][n];
+    }
+    public int[] zeroone(String a){
+      int N=a.length();
+      int[] zeroandone=new int[2];
+      for(int i=0;i<N;i++)
+      {
+          zeroandone[a.charAt(i)-'0']++; 
+        }
+        return zeroandone;
+      } 
+    }
+```
+
+##### 1239.串联字符串的最大长度
+
+给定一个字符串数组 arr，字符串 s 是将 arr 某一子序列字符串连接所得的字符串，如果 s 中的**每一个字符都只出现过一次，那么它就是一个可行解**。
+
+请返回所有可行解 s 中最长长度
+
+- 计算可行解的长度：构成可行解的每一个字符串可以视为一个字符集合，且集合不含重复元素。
+- 用二进制表示该字符串的字符集合，二进制的第i位为1表示字符集合中含有第i个小写字母。为0表示字符集合中不含有第i个小写字母。
+
+- 遍历arr，从中筛选出无重复字母的字符串，将其对应的二进制加入一维数组，记作masks。
+
+回溯法：
+
+- backtrack(pos,mask)表示递归的函数，其中Pos表示递归到了数组masks中第pos个数，mask表示当前连接得到的字符串对应二进制数为mask；
+- 对于第pos个数：选或者不选，
+- 选：如果连接得到的mask和masks[pos]无公共元素，则可以选这个数，此时调用back(pos+1,mask|masks[pos])进行递归，如果不选则backtrack(pos+1,mask)
+- 记masks的长度为n，当pos=n时，计算mask中1的个数，即为可行解的长度。
+
+
+
 
 
