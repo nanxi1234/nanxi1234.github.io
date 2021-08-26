@@ -856,3 +856,91 @@ class Solution {
 
 
 
+###### 字节面试题
+
+```java
+public  static int findMaxSum(int[] time,int[] nums){
+    int N = nums.length;
+    if(N == 0) return 0;
+    int pos =0;
+    long max = nums[0];
+    long res = 0;//初始化
+    //对nums数组求一个前缀和
+    for(int i = 1;i<N;i++) {
+        nums[i] += nums[i - 1];
+    }
+    for(int i = 1;i<N;i++){
+        if(time[i]-time[i-1] > 3) {//左边没有比它大的数
+            res = nums[i]-nums[i-1];
+            max = Math.max(res,max);
+        }
+        if(time[i]-time[0]<=3){//左边全比它小
+           // res = nums[i];
+            res = findMaxArray(nums,0,i);
+            res = Math.max(res,nums[i]);
+            max = Math.max(res,max);
+        }
+          //在0~i-1查找，找到一个值，res = nums[i] - nums[mid - 1]
+        else {//要找的数在左边的某个位置，由于time是有序的，用二分查找即可
+            int lo = 0, hi = i-1;
+            while (hi > lo) {
+                int mid = lo + 1+((hi - lo) >> 1);
+                if (time[i] - time[mid] > 3) {
+                    lo = mid;
+                }
+                if (time[i] - time[mid] <= 3) {
+                    hi = mid-1;
+                }
+            }
+            res = findMaxArray(nums,lo,i);
+            max = Math.max(res, max);
+        }
+    }
+    return (int)max;
+}
+ public static int findMaxArray(int[] nums,int a,int b)
+ {
+     int max = Integer.MIN_VALUE;
+     for(int i = b-1;i>=a;i--){
+         max =  Math.max(nums[b]-nums[i],max);
+
+     }
+     return max;
+ }
+```
+
+###### 105.从前序与中序遍历序列构造二叉树
+
+- 变形：从前序与中序遍历序列输出后序遍历
+
+```java
+public class Testnums {
+    static Map<Integer,Integer> map = new HashMap<>();
+    static int[] res;static int count = 0;
+    private static int N;
+    public static int[] Testmyquest(int[] pre, int[] in){
+        N = pre.length;
+        res = new int[N];
+        for(int i = 0;i<N;i++){
+            map.put(in[i],i);
+        }
+        dfs(0,0,N-1,pre);
+        return res;
+    }
+    public static void dfs(int root,int start,int end,int[] pre){
+        if(start>end) return;
+        int index = map.get(pre[root]);
+        dfs(root+1,start,index-1,pre);
+        dfs(root+1 + index - start,index+1,end,pre);
+        res[count++] = pre[root];
+    }
+    public static void main(String[] args) {
+        int pre[] = {1, 2, 3, 4, 5, 6};
+        int in[] = {3, 2, 4, 1, 6, 5};
+        Testmyquest(pre,in);
+        for(int i = 0;i<N;i++){
+            System.out.println(res[i]);
+        }
+        }
+    }
+```
