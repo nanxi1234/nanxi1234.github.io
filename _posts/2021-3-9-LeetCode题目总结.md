@@ -944,3 +944,65 @@ public class Testnums {
         }
     }
 ```
+
+###### 879变形
+
+有n个技能，技能有伤害和所需金币数，求技能伤害大于totalDamage和金币数小于totalCoin的方案总数。
+
+```java
+package DemoDS;
+public class demoMMO {
+    //解法一
+    public static int getPlanNum1(int totalCoin,int totalDamage,int[] damage,int[] coin) {
+        int N = coin.length;
+        int[][][] dp = new int[N+1][totalCoin+1][totalDamage+1];
+        //确定状态，dp[i,j,k]为考虑前i个技能，使用硬币数小于j,所造成的伤害大于k的方案数
+        //总体思路：先求考虑前i个技能，使用硬币数不大于j,所造成的伤害不小于k的方案数，去除掉等于的情况即为所求
+        //对于每个技能只有两种决策：选/不选
+        //不选-->dp[i-1][j][k]也即方案数不变
+        //选-->dp[i-1][j-damage[i-1]][max(k-coin[i-1],0)]
+        //条件改变-->造成伤害大于0（针对k<coin[i-1]的情况，这种情况肯定满足条件，为了下标不为负转移到0）或k-coin[i-1]，硬币数小于j-co
+        for(int j = 0;j<totalCoin+1;j++){
+                dp[0][j][0] = 1;
+        }
+        for(int i = 1;i<N+1;i++){
+            int dam = damage[i-1],co = coin[i-1];
+            for(int j = 0;j<totalCoin+1;j++){
+                for(int k = 0;k<totalDamage+1;k++) {
+                    dp[i][j][k] = dp[i-1][j][k];//不选择第i个硬币
+                    if(j>co && k != dam) {//去除掉包含j=co和k=dam的情况
+                        dp[i][j][k] += dp[i - 1][j - co][Math.max(0, k - dam)];//选择第i个硬币，条件改变-->造成伤害大于0或k-coin[i-1]，硬币数小于j-co
+                    }
+                }
+            }
+        }
+        return dp[N][totalCoin][totalDamage];
+    }
+    //解法二：利用滚动数组优化空间
+    public static int getPlanNum2(int totalCoin,int totalDamage,int[] damage,int[] coin){
+        int N = coin.length;
+        int[][] dp = new int[totalCoin+1][totalDamage+1];
+        for(int j = 0;j<totalCoin+1;j++){
+            dp[j][0] = 1;
+        }
+        for(int i = 1;i<N+1;i++){
+            int dam = damage[i-1],co = coin[i-1];
+            for(int j = totalCoin;j>=co;j--){
+                for(int k = totalDamage;k>=0;k--) {
+                    if(j>co && k != dam) {//去除掉包含j=co和k=dam的情况
+                        dp[j][k] += dp[j - co][Math.max(0, k - dam)];//选择第i个硬币，条件改变-->造成伤害大于0或k-coin[i-1]，硬币数小于j-co
+                    }
+                }
+            }
+        }
+        return dp[totalCoin][totalDamage];
+    }
+    public static void main( String[] args){
+        int[] Damage = {6,7,8};
+        int[] Coin = {2,3,5};
+        int skill = getPlanNum2(10,6,Damage,Coin);
+        System.out.print(skill);
+    }
+}
+```
+
